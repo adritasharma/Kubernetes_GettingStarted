@@ -12,16 +12,23 @@ Containers wrap software in a standardized environment that allows it to run con
 Container Orchestration refers to processes used to manage containers and to automate the management of containers.
 Deploy new code with zero down time.
 For example:
+
 • I want to start up a set of five containers in production.
+
 • I could spin up each container manually.
+
 • Or, I could tell an orchestration tool like Kubernetes that I want five containers, and let the tool do it.
 
 ### What are Containers Used For?
 
  **Software Portability** – Running software consistently on different machines.
+ 
  **Isolation** – Keeping individual pieces of software separate from one another.
+ 
  **Scaling** – Increasing or decreasing resources allocated to software as needed.
+ 
  **Automation** – Automating processes to save time and money.
+ 
  **Efficient Resource Usage** – Containers use resources efficiently, which saves money.
 
 ### What is Docker?
@@ -52,10 +59,12 @@ For example:
 - Marathon Based
 - Nomad
 - **Cloud Orchestration Solutions**
+
     Cloud providers such as Amazon Web Services, Microsoft Azure, and Google Cloud Platform also offer built-in container orchestration solutions, including cloud-native Kubernetes implementations! 
     For example: 
-   ** Red Hat OpenShift
-    Amazon Elastic Container Service 
-    Amazon ECS for Kubernetes
-    Azure Kubernetes Service 
-    Google Kubernetes Engine**
+    
+    - Red Hat OpenShift
+    - Amazon Elastic Container Service 
+    - Amazon ECS for Kubernetes
+    - Azure Kubernetes Service 
+    - Google Kubernetes Engine
