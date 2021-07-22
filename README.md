@@ -1,4 +1,4 @@
-# Kubernetes_GettingStarted
+# Kubernetes Getting Started
 
 ### What are Containers?
 
