@@ -6,6 +6,10 @@ Containers are all about portable software.
 Technology that allows to run software on a variety of systems, including a developer’s laptop, all the way to a production system.
 Containers wrap software in a standardized environment that allows it to run consistently on varied machines.
 
+Modern applications are made up ofa bunch of independent microservices running in containers.
+
+Containers are similar to vairtual machie but more like a virtual operating environment. It is a standardized unit with everything a software needs to run (eg: code, libraries, runtimes, system tools)
+
 
 ### What is Orchestration?
 
@@ -39,6 +43,7 @@ For example:
 - Docker allows us to run containers on systems. 
 - It also offers a variety of tools for creating and managing containers and container images. 
 - It is a Platform to build, ship and run apps
+- Containers run on a Docker host.
 
 ### What are other Container runtimes?
 
@@ -58,6 +63,7 @@ For example:
 - Zookeeper
 - Marathon Based
 - Nomad
+
 - **Cloud Orchestration Solutions**
 
     Cloud providers such as Amazon Web Services, Microsoft Azure, and Google Cloud Platform also offer built-in container orchestration solutions, including cloud-native Kubernetes implementations! 
@@ -65,6 +71,11 @@ For example:
     
     - Red Hat OpenShift
     - Amazon Elastic Container Service 
-    - Amazon ECS for Kubernetes
+    - Amazon ECS for Kubernetes (EKS)
     - Azure Kubernetes Service 
     - Google Kubernetes Engine
+  
+  
+### EKS - Elastic Kubernetes Service 
+
+It is a managed service that makes it easy to run Kubernetes on AWS without needing to install or operate our own Kubernetes control pane or worker nodes.
