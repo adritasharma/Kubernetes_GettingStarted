@@ -86,9 +86,18 @@ Software technology that packages an application along with its runtime dependen
 
 The smallest object of the Kubernetes ecosystem, a Pod represents a group of one or more containers running together on your cluster.
 
+A pod share the same IP address space.
+
+Eg: We can group Shopping Cart and Recomendation engine in same pod if they are going to continuously interact with one another i.e coupled or dependent in some way
+
 **Node** 
 
 A node is a worker machine in Kubernetes - a workload is run by putting containers into pods which run on nodes. A node can be either a virtual or physical machine, depending on the cluster.
+
+**Service**
+
+An abstraction which defines a set of pods and makes sure that network traffic can be directed to the pods for the workload.
+We use s
 
 **Cluster** 
 
@@ -110,7 +119,12 @@ The control plane manages the worker nodes and the Pods in the cluster.
 **Deployment** 
 
 Creating instances if our container. Control plane schedules, monitors and restart instances
+
+**Image** 
   
+  The docker image that the deployment will use. Image is a read only template that can create container instances of our application.
+  We can store image in container registry (loke Docker Hub, Elastic Container Registry etc)
+
 ### EKS - Elastic Kubernetes Service 
 
 It is a managed service that makes it easy to run Kubernetes on AWS without needing to install or operate our own Kubernetes control pane or worker nodes.
