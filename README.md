@@ -133,7 +133,8 @@ The control plane manages the worker nodes and the Pods in the cluster.
 
 **kubectl**
 
-The Kubernetes command-line tool, kubectl, allows to run commands (like create, delete, get logs etc) against Kubernetes clusters.
+The Kubernetes command-line tool, kubectl, allows to run commands against Kubernetes clusters.
+We can use kubectl to deploy applications, inspect and manage cluster resources, and view logs etc
 
 ### EKS - Elastic Kubernetes Service 
 
