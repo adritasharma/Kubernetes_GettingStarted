@@ -74,7 +74,42 @@ For example:
     - Amazon ECS for Kubernetes (EKS)
     - Azure Kubernetes Service 
     - Google Kubernetes Engine
-  
+
+
+### Kubernetes Terminologies
+
+**Container** 
+
+Software technology that packages an application along with its runtime dependencies.
+
+**Pod** :
+
+The smallest object of the Kubernetes ecosystem, a Pod represents a group of one or more containers running together on your cluster.
+
+**Node** 
+
+A node is a worker machine in Kubernetes - a workload is run by putting containers into pods which run on nodes. A node can be either a virtual or physical machine, depending on the cluster.
+
+**Cluster** 
+
+A cluster is a group of nodes that run  containerised applications. We can manage the cluster and everything it includes with Kubernetes. 
+A cluster is made up of a master node and a set of worker nodes. While the control plane works to maintain the desired state of the cluster, the worker nodes actually run the applications and workloads.
+
+**Control plane**
+
+The control plane manages the worker nodes and the Pods in the cluster.
+
+
+**Namespace**
+
+A virtual ‘slice’ of a cluster where we can provision resources, organise objects and deploy applications inside the cluster.
+
+control plane in Kubernetes?
+The control plane manages the worker nodes and the Pods in the cluster.
+
+**Deployment** 
+
+Creating instances if our container. Control plane schedules, monitors and restart instances
   
 ### EKS - Elastic Kubernetes Service 
 
