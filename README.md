@@ -97,7 +97,8 @@ A node is a worker machine in Kubernetes - a workload is run by putting containe
 **Service**
 
 An abstraction which defines a set of pods and makes sure that network traffic can be directed to the pods for the workload.
-We use s
+We use service to expose application and make it available over network.
+Load balancer is am example of service.
 
 **Cluster** 
 
@@ -113,9 +114,6 @@ The control plane manages the worker nodes and the Pods in the cluster.
 
 A virtual ‘slice’ of a cluster where we can provision resources, organise objects and deploy applications inside the cluster.
 
-control plane in Kubernetes?
-The control plane manages the worker nodes and the Pods in the cluster.
-
 **Deployment** 
 
 Creating instances if our container. Control plane schedules, monitors and restart instances
@@ -124,6 +122,18 @@ Creating instances if our container. Control plane schedules, monitors and resta
   
   The docker image that the deployment will use. Image is a read only template that can create container instances of our application.
   We can store image in container registry (loke Docker Hub, Elastic Container Registry etc)
+  
+  
+### Kubernetes architecture
+
+**Control plane (master)** 
+
+The Control plane is made up of the kube-api server, kube scheduler, cloud-controller-manager and kube-controller-manager. Kube proxies and kubelets live on each node, talking to the API and managing the workload of each node. 
+The control plane manages the worker nodes and the Pods in the cluster.
+
+**kubectl**
+
+The Kubernetes command-line tool, kubectl, allows to run commands (like create, delete, get logs etc) against Kubernetes clusters.
 
 ### EKS - Elastic Kubernetes Service 
 
