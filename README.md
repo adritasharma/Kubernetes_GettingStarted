@@ -124,9 +124,9 @@ Creating instances if our container. Control plane schedules, monitors and resta
   We can store image in container registry (loke Docker Hub, Elastic Container Registry etc)
   
   
-### Kubernetes architecture
+## Kubernetes architecture
 
-**Control plane (master)** 
+### Control plane (master) Components 
 
 The Control plane is made up of the kube-api server, kube scheduler, cloud-controller-manager and kube-controller-manager. Kube proxies and kubelets live on each node, talking to the API and managing the workload of each node. 
 The control plane manages the worker nodes and the Pods in the cluster.
@@ -175,6 +175,27 @@ We can use kubectl to deploy applications, inspect and manage cluster resources,
 ![image](https://user-images.githubusercontent.com/29271635/128332251-3c34536c-6267-4697-b21e-daaf05ca4070.png)
 
 ![image](https://user-images.githubusercontent.com/29271635/128371278-be715591-99d3-4214-8711-28c1916f74d4.png)
+
+### Node Components 
+
+**kubelet**
+
+An agent that runs on each node in the cluster. It makes sure that containers are running in a Pod. It watches API server for new work tasks (Pods).
+It reports back to Masters
+
+Nodes can be linux or Windows machines.
+
+**Container runtime**
+
+It can be docker. It is pluggable to Container runtime Interface (CRI),
+
+**kube-proxy**
+
+kube-proxy is a network proxy that runs on each node in your cluster, implementing part of the Kubernetes Service concept.
+
+kube-proxy maintains network rules on nodes. These network rules allow network communication to your Pods from network sessions inside or outside of your cluster.
+
+Each pod has a single IP
 
 ### EKS - Elastic Kubernetes Service 
 
