@@ -138,7 +138,7 @@ We should run the application in worker nodes and leave to master solely for loo
 
 **kube-apiserver**
 
-Frontend to the control pane. When we isuue commands to the cluster, we send them to the api server.
+The API server is a component of the Kubernetes control plane that exposes the Kubernetes API. The API server is the front end for the Kubernetes control plane. When we isuue commands to the cluster, we send them to the api server.
 It exposes REST API Port an d consumes JSON/YAML.
 
 We send YAML manifest files describing our apps to the api server. It authenticates and validates it and then instruct control pane features  to deploy it.
@@ -155,6 +155,21 @@ We can use kubectl to deploy applications, inspect and manage cluster resources,
 
 **etcd**
 
+Consistent and highly-available key value store used as Kubernetes' backing store for all cluster data.
+
+**kube-controller-manager**
+
+It is the Control plane component that runs controller processes.
+
+Each controller is a separate process, but to reduce complexity, they are all compiled into a single binary and run in a single process.
+
+Some types of these controllers are:
+
+- Node controller: Responsible for noticing and responding when nodes go down.
+- Job controller: Watches for Job objects that represent one-off tasks, then creates Pods to run those tasks to completion.
+- Endpoints controller: Populates the Endpoints object (that is, joins Services & Pods).
+- Service Account & Token controllers: Create default accounts and API access tokens for new namespaces.
+- Deployment controller
 
 
 ### EKS - Elastic Kubernetes Service 
