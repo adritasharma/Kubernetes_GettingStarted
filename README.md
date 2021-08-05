@@ -136,6 +136,9 @@ The control plane manages the worker nodes and the Pods in the cluster.
 The Kubernetes command-line tool, kubectl, allows to run commands against Kubernetes clusters.
 We can use kubectl to deploy applications, inspect and manage cluster resources, and view logs etc
 
+![image](https://user-images.githubusercontent.com/29271635/128332251-3c34536c-6267-4697-b21e-daaf05ca4070.png)
+
+
 ### EKS - Elastic Kubernetes Service 
 
 It is a managed service that makes it easy to run Kubernetes on AWS without needing to install or operate our own Kubernetes control pane or worker nodes.
