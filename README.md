@@ -134,12 +134,27 @@ The control plane manages the worker nodes and the Pods in the cluster.
 Control plane consists of masters. Kubernetes operates in active passive mode. If a control pane consists of 3 masters, only one is leased and rest of the 2s are followers. Followers proxy all the requests to the leader. If the leader goes down, a new leader is elected.
 Kubernetes needs seperate linux machines (physical machine on onprem data center or virtual instance in public cloud) to run each master.
 
+We should run the application in worker nodes and leave to master solely for looking after the cluster
+
+**kube-apiserver**
+
+Frontend to the control pane. When we isuue commands to the cluster, we send them to the api server.
+It exposes REST API Port an d consumes JSON/YAML.
+
+We send YAML manifest files describing our apps to the api server. It authenticates and validates it and then instruct control pane features  to deploy it.
+
 **kubectl**
 
 The Kubernetes command-line tool, kubectl, allows to run commands against Kubernetes clusters.
 We can use kubectl to deploy applications, inspect and manage cluster resources, and view logs etc
 
 ![image](https://user-images.githubusercontent.com/29271635/128332251-3c34536c-6267-4697-b21e-daaf05ca4070.png)
+
+![image](https://user-images.githubusercontent.com/29271635/128371278-be715591-99d3-4214-8711-28c1916f74d4.png)
+
+
+**etcd**
+
 
 
 ### EKS - Elastic Kubernetes Service 
