@@ -143,16 +143,6 @@ It exposes REST API Port an d consumes JSON/YAML.
 
 We send YAML manifest files describing our apps to the api server. It authenticates and validates it and then instruct control pane features  to deploy it.
 
-**kubectl**
-
-The Kubernetes command-line tool, kubectl, allows to run commands against Kubernetes clusters.
-We can use kubectl to deploy applications, inspect and manage cluster resources, and view logs etc
-
-![image](https://user-images.githubusercontent.com/29271635/128332251-3c34536c-6267-4697-b21e-daaf05ca4070.png)
-
-![image](https://user-images.githubusercontent.com/29271635/128371278-be715591-99d3-4214-8711-28c1916f74d4.png)
-
-
 **etcd**
 
 Consistent and highly-available key value store used as Kubernetes' backing store for all cluster data.
@@ -171,6 +161,20 @@ Some types of these controllers are:
 - Service Account & Token controllers: Create default accounts and API access tokens for new namespaces.
 - Deployment controller
 
+
+**kube-scheduler**
+
+It watches  API server for new work tasks and assigns work to cluster nodes.
+
+
+**kubectl**
+
+The Kubernetes command-line tool, kubectl, allows to run commands against Kubernetes clusters.
+We can use kubectl to deploy applications, inspect and manage cluster resources, and view logs etc
+
+![image](https://user-images.githubusercontent.com/29271635/128332251-3c34536c-6267-4697-b21e-daaf05ca4070.png)
+
+![image](https://user-images.githubusercontent.com/29271635/128371278-be715591-99d3-4214-8711-28c1916f74d4.png)
 
 ### EKS - Elastic Kubernetes Service 
 
