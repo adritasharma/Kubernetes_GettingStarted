@@ -131,6 +131,9 @@ Creating instances if our container. Control plane schedules, monitors and resta
 The Control plane is made up of the kube-api server, kube scheduler, cloud-controller-manager and kube-controller-manager. Kube proxies and kubelets live on each node, talking to the API and managing the workload of each node. 
 The control plane manages the worker nodes and the Pods in the cluster.
 
+Control plane consists of masters. Kubernetes operates in active passive mode. If a control pane consists of 3 masters, only one is leased and rest of the 2s are followers. Followers proxy all the requests to the leader. If the leader goes down, a new leader is elected.
+Kubernetes needs seperate linux machines (physical machine on onprem data center or virtual instance in public cloud) to run each master.
+
 **kubectl**
 
 The Kubernetes command-line tool, kubectl, allows to run commands against Kubernetes clusters.
