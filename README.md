@@ -88,7 +88,10 @@ The smallest object of the Kubernetes ecosystem, a Pod represents a group of one
 
 A pod share the same IP address space.
 
-Eg: We can group Shopping Cart and Recomendation engine in same pod if they are going to continuously interact with one another i.e coupled or dependent in some way
+Eg: We can group Shopping Cart and Recomendation engine in same pod if they are going to continuously interact with one another i.e coupled or dependent in some way like they need to share volumes, memory etc.
+
+![image](https://user-images.githubusercontent.com/29271635/128674885-c92adb2c-6ba5-4a0a-9e85-db290856253c.png)
+
 
 **Node** 
 
@@ -197,6 +200,8 @@ kube-proxy maintains network rules on nodes. These network rules allow network c
 
 Each pod has a single IP
 
-### EKS - Elastic Kubernetes Service 
 
-It is a managed service that makes it easy to run Kubernetes on AWS without needing to install or operate our own Kubernetes control pane or worker nodes.
+
+### Declarative model
+
+Describe what we want (desired state) in a manifest file. Kubernetes work in Declarative model
