@@ -124,7 +124,19 @@ A virtual ‘slice’ of a cluster where we can provision resources, organise ob
 
 **Deployment** 
 
-Creating instances if our container. Control plane schedules, monitors and restart instances
+Creating instances if our container. Control plane schedules, monitors and restart instances.
+
+Deployment Controller/ Reconciliation loop watches API server for new deployments and implements them/
+It constantly compares observed state with desired state.
+
+Suppose observed state has 4 replicas. Therefore 4 pods are instantiated. Now 1 pod goes doen, so observed state is 3 and desired state is 4. Deployment Controller works with Replica state and spins a new pod immediately.
+
+The desired state is maintained in the manifest yaml file.
+
+![image](https://user-images.githubusercontent.com/29271635/129708437-3e1a6260-a4b7-4d71-bf1e-83d167e1efb8.png)
+
+
+
 
 **Image** 
   
