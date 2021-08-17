@@ -99,11 +99,14 @@ A node is a worker machine in Kubernetes - a workload is run by putting containe
 
 **Service**
 
-An abstraction which defines a set of pods and makes sure that network traffic can be directed to the pods for the workload.
+Service sends traffic to healthy pods. It is an abstraction which defines a set of pods and makes sure that network traffic can be directed to the pods for the workload.
 We use service to expose application and make it available over network.
 Load balancer is an example of service.
 
-When a pod goes down, a new pod spins with a different IP address. Kubernetes svc manages the netword traffic
+When a pod goes down, a new pod spins with a different IP address. Kubernetes svc manages the netword traffic.
+
+![image](https://user-images.githubusercontent.com/29271635/129694338-d2ae21c8-2c3d-4c63-9b98-dec1554cb7eb.png)
+
 
 **Cluster** 
 
