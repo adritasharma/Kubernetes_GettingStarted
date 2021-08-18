@@ -166,8 +166,8 @@ Pods, Services, Deployment, replica set, job, cronjob, secrets, nodes etc (every
 
 **kube-apiserver**
 
-The API server is a component of the Kubernetes control plane that exposes the Kubernetes API. The API server is the front end for the Kubernetes control plane. When we isuue commands to the cluster, we send them to the api server.
-It exposes REST API Port an d consumes JSON/YAML.
+The API server is a component of the Kubernetes control plane that exposes the Kubernetes API over secure Restful endpoints. The API server is the front end for the Kubernetes control plane. When we isuue commands to the cluster, we send them to the api server.
+It exposes REST API Port and consumes JSON/YAML.
 
 We send YAML manifest files describing our apps to the api server. It authenticates and validates it and then instruct control pane features  to deploy it.
 
