@@ -156,6 +156,14 @@ Kubernetes needs seperate linux machines (physical machine on onprem data center
 
 We should run the application in worker nodes and leave to master solely for looking after the cluster
 
+
+**Kubernetes API**
+
+Pods, Services, Deployment, replica set, job, cronjob, secrets, nodes etc (everything) are objects in Kubernetes API. The API contains the defination and feature set of each object in Kubernetes.
+
+![image](https://user-images.githubusercontent.com/29271635/129861114-e5f67fd5-016f-49cf-8572-63ba608153fb.png)
+
+
 **kube-apiserver**
 
 The API server is a component of the Kubernetes control plane that exposes the Kubernetes API. The API server is the front end for the Kubernetes control plane. When we isuue commands to the cluster, we send them to the api server.
