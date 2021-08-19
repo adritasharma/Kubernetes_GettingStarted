@@ -228,4 +228,41 @@ Each pod has a single IP
 
 ## Workflow
 
-App Code (with Docker File) **->** Build Container Image **->** Store Image in Registry (eg: Docker Hub) **->** Define K8 Manifest files **->** POST in API Server
+App Code (with Docker File) **->** Build Container Image **->** Store Image in Registry (eg: Docker Hub) **->** Define K8 Manifest(yaml) files **->** POST in API Server
+
+### Creating Manifest files
+
+**Pod Manifest - pod.yml**
+```
+# Simple Kubernetes Pod to deploy the app contained in nigelpoulton/getting-started-k8s:1.0
+
+apiVersion: v1 
+kind: Pod
+metadata:
+  name: hello-pod
+  labels:
+    app: web
+spec:
+  containers:
+    - name: web-ctr
+      image: adritasharma/getting-started-k8s:1.0
+      ports:
+        - containerPort: 8080
+```
+
+
+### Deploying Pod
+
+We can deploy the Pod in any Kubernetes Cluster (ex: Docker Desktop, AKS, GKE etc).
+
+`kubectl apply -f pod.yml`
+
+In this command, kubectl will POST the file to the API server. It will authenticate and assign the pod to a node
+
+To view the pods:
+ 
+`kubectl get pods`
+
+![image](https://user-images.githubusercontent.com/29271635/130047593-e81a81b9-555f-464f-8329-629ccaef573f.png)
+
+Note: Nodes are Virtual machines or cloud instances, pods are applications. Pods run in the node.
