@@ -226,7 +226,6 @@ kube-proxy maintains network rules on nodes. These network rules allow network c
 Each pod has a single IP
 
 
+## Workflow
 
-### Declarative model
-
-Describe what we want (desired state) in a manifest file. Kubernetes work in Declarative model
+App Code (with Docker File) **->** Build Container Image **->** Store Image in Registry (eg: Docker Hub) **->** Define K8 Manifest files **->** POST in API Server
