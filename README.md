@@ -230,11 +230,11 @@ Each pod has a single IP
 
 App Code (with Docker File) **->** Build Container Image **->** Store Image in Registry (eg: Docker Hub) **->** Define K8 Manifest(yaml) files **->** POST in API Server
 
-### Creating Manifest files
+### Creating Pod Manifest 
 
-**Pod Manifest - pod.yml**
+**pod.yml**
 ```
-# Simple Kubernetes Pod to deploy the app contained in nigelpoulton/getting-started-k8s:1.0
+# Simple Kubernetes Pod to deploy the app contained in adritasharma/getting-started-k8s:1.0
 
 apiVersion: v1 
 kind: Pod
