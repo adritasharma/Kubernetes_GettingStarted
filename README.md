@@ -275,6 +275,9 @@ Kubernetes Service Object expose application internally and externally, i.e with
 
 ![image](https://user-images.githubusercontent.com/29271635/130635459-f070863d-a638-4a4a-b536-94ab2309026b.png)
 
+![image](https://user-images.githubusercontent.com/29271635/130639698-6132a506-1614-4b22-9a81-97fe8d9b44ca.png)
+
+
 We can see a Pod,'s IPs when we run `kubectl get pods` but these IPs are not reliable as a Pod may go down. Service sends traffic to the helthy pods
 Pods IP.
 
