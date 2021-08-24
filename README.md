@@ -266,3 +266,18 @@ To view the pods:
 ![image](https://user-images.githubusercontent.com/29271635/130047593-e81a81b9-555f-464f-8329-629ccaef573f.png)
 
 Note: Nodes are Virtual machines or cloud instances, pods are applications. Pods run in the node.
+
+
+## Kubernetes Service
+
+![image](https://user-images.githubusercontent.com/29271635/130634988-795ec8a2-9da6-4a4e-801c-e1cde558232c.png)
+
+
+Kubernetes Service Object expose application internally and externally, i.e within the cluster (eg- from another pod running in the same cluster) and to the outside world.
+
+We can see a Pod,'s IPs when we run `kubectl get pods` but these IPs are not reliable as a Pod may go down. Service sends traffic to the helthy pods
+Pods IP.
+
+Service object is a REST object in Kubernetes API
+
+![image](https://user-images.githubusercontent.com/29271635/130634700-2bc3a546-e1d0-4b62-a7ef-a303e858a385.png)
