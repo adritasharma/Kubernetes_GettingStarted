@@ -270,7 +270,8 @@ Note: Nodes are Virtual machines or cloud instances, pods are applications. Pods
 
 ## Kubernetes Service
 
-![image](https://user-images.githubusercontent.com/29271635/130634988-795ec8a2-9da6-4a4e-801c-e1cde558232c.png)
+
+![image](https://user-images.githubusercontent.com/29271635/130635459-f070863d-a638-4a4a-b536-94ab2309026b.png)
 
 
 Kubernetes Service Object expose application internally and externally, i.e within the cluster (eg- from another pod running in the same cluster) and to the outside world.
