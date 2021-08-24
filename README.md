@@ -6,9 +6,9 @@ Containers are all about portable software.
 Technology that allows to run software on a variety of systems, including a developer’s laptop, all the way to a production system.
 Containers wrap software in a standardized environment that allows it to run consistently on varied machines.
 
-Modern applications are made up ofa bunch of independent microservices running in containers.
+Modern applications are made up of a bunch of independent microservices running in containers.
 
-Containers are similar to vairtual machie but more like a virtual operating environment. It is a standardized unit with everything a software needs to run (eg: code, libraries, runtimes, system tools)
+Containers are similar to virtual machine but more like a virtual operating environment. It is a standardized unit with everything a software needs to run (eg: code, libraries, runtimes, system tools)
 
 
 ### What is Orchestration?
