@@ -275,8 +275,6 @@ Kubernetes Service Object expose application internally and externally, i.e with
 
 ![image](https://user-images.githubusercontent.com/29271635/130635459-f070863d-a638-4a4a-b536-94ab2309026b.png)
 
-![image](https://user-images.githubusercontent.com/29271635/130639698-6132a506-1614-4b22-9a81-97fe8d9b44ca.png)
-
 
 We can see a Pod,'s IPs when we run `kubectl get pods` but these IPs are not reliable as a Pod may go down. Service sends traffic to the helthy pods
 Pods IP.
@@ -292,3 +290,10 @@ Pod manifest contains a label. If we add this label name to the service selector
 
 ![image](https://user-images.githubusercontent.com/29271635/130636207-48bf4028-2681-4d44-9ae6-5ea0f1b12154.png)
 
+**Node Port**
+
+![image](https://user-images.githubusercontent.com/29271635/130639939-717372f1-c992-442d-887d-4d5d7e3caa76.png)
+
+### Creating Service Imperatively
+
+`kubectl expose pod hello-pod --name=hello-svc --targer-port=8080 --type=NodePort`
