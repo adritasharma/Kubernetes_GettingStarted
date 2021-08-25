@@ -310,3 +310,14 @@ Note: hello-svc will be registered in DNS
 
 
 
+### Creating Service Declaratively
+
+![image](https://user-images.githubusercontent.com/29271635/130787913-f21d3b18-c904-4175-92d2-9a775c0d0087.png)
+
+Note: ps-nodeport will be registered in DNS
+
+There are mainly 3 types of service
+
+- **ClusterIP** (default) - It only makes the IP available inside the cluster
+- **NodePort** - External access via nodes
+- **LoadBalancer** - External access via cloud load-balancer
