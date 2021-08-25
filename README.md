@@ -304,5 +304,9 @@ It is Imperative way because `kubectl expose` is the command to create the servi
 
 Note: hello-svc will be registered in DNS
 
-![image](https://user-images.githubusercontent.com/29271635/130787220-37bb016b-741f-436a-9b22-dca7c0d7f971.png)
+`kubectl get svc`
+
+![image](https://user-images.githubusercontent.com/29271635/130787613-6b2f9c6b-6d03-4393-b98c-614fbb89e409.png)
+
+
 
