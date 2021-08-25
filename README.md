@@ -323,3 +323,17 @@ Note: hello-svc will be registered in DNS
 
 Note: ps-nodeport will be registered in DNS
 
+
+### Creating LoadBalancer Services
+
+It only works with Cloud that supports Load Balancer
+
+![image](https://user-images.githubusercontent.com/29271635/130815610-aa1cc564-fcba-43b9-87d0-c09056dbcda8.png)
+
+
+`kubectl apply -f svc-lb.yml`
+
+`kubectl get svc`
+
+![image](https://user-images.githubusercontent.com/29271635/130815815-3fc5010c-86aa-4a74-b9df-58a7da0cc92e.png)
+
