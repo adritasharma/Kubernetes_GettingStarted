@@ -273,6 +273,13 @@ Note: Nodes are Virtual machines or cloud instances, pods are applications. Pods
 
 Kubernetes Service Object expose application internally and externally, i.e within the cluster (eg- from another pod running in the same cluster) and to the outside world.
 
+There are mainly 3 types of service
+
+- **ClusterIP** (default) - It only makes the IP available inside the cluster
+- **NodePort** - External access via nodes
+- **LoadBalancer** - External access via cloud load-balancer
+
+
 ![image](https://user-images.githubusercontent.com/29271635/130635459-f070863d-a638-4a4a-b536-94ab2309026b.png)
 
 
@@ -316,8 +323,3 @@ Note: hello-svc will be registered in DNS
 
 Note: ps-nodeport will be registered in DNS
 
-There are mainly 3 types of service
-
-- **ClusterIP** (default) - It only makes the IP available inside the cluster
-- **NodePort** - External access via nodes
-- **LoadBalancer** - External access via cloud load-balancer
