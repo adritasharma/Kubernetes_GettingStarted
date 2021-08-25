@@ -292,8 +292,17 @@ Pod manifest contains a label. If we add this label name to the service selector
 
 **Node Port**
 
+It is the option to create port for the service on every cluster node. Node Port also creates a Cluster IP
+
 ![image](https://user-images.githubusercontent.com/29271635/130639939-717372f1-c992-442d-887d-4d5d7e3caa76.png)
 
 ### Creating Service Imperatively
 
+It is Imperative way because `kubectl expose` is the command to create the service and then all the config options are listet here in the command line. We aare not pulling them from config file that we can store in a code repository that can be versioned
+
 `kubectl expose pod hello-pod --name=hello-svc --targer-port=8080 --type=NodePort`
+
+Note: hello-svc will be registered in DNS
+
+![image](https://user-images.githubusercontent.com/29271635/130787220-37bb016b-741f-436a-9b22-dca7c0d7f971.png)
+
