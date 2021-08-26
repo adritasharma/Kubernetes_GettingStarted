@@ -341,10 +341,22 @@ It only works with Cloud that supports Load Balancer
 
 Kubernetes Deployment is an object in Kubernetes API in the apps API sub group.
 
+
 It has this important features:
 
-- Self ealing
+- Self Healing
 - Scaling
 - Rolling Updates
 - Rollbacks
+
+![image](https://user-images.githubusercontent.com/29271635/130995163-3658e92a-4d4b-4614-be36-10e9e62221a3.png)
+
+
+### Replica set
+
+Replica set is a API object. It does the Self healing and scaling. It continously monitors observed and desired state.
+
+## Creating Deployment YAML
+
+
 
