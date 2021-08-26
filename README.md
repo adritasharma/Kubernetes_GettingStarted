@@ -337,3 +337,14 @@ It only works with Cloud that supports Load Balancer
 
 ![image](https://user-images.githubusercontent.com/29271635/130815815-3fc5010c-86aa-4a74-b9df-58a7da0cc92e.png)
 
+# Kubernetes Deployment
+
+Kubernetes Deployment is an object in Kubernetes API in the apps API sub group.
+
+It has this important features:
+
+- Self ealing
+- Scaling
+- Rolling Updates
+- Rollbacks
+
