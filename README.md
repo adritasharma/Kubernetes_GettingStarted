@@ -483,3 +483,26 @@ spec:
 So Kubernetes will deploy 1 new pod on the new version (the 11th Pod), wait until it is up and running for minimum 5 seconds then terminate an old Pod. It will repeat the process until it cycles through all 10 Pods
 
 ### Rollbacks
+
+Old replica set from old Pod versions stays in the cluster which makes it easy for rollbacks.
+
+`kubectl get rs`
+
+![image](https://user-images.githubusercontent.com/29271635/131511770-fc26ed5d-fc31-47e5-9414-e61c8169234a.png)
+
+
+- The 1st one manages the new replicas.
+- The second one manages the old replicas. Even if it doesn't have any Pods now, it is still present in the cluster
+
+**Rollback**
+
+`kubectl rollout undo deploy web-deploy --to-revision=1`
+
+![image](https://user-images.githubusercontent.com/29271635/131512462-370cb6bd-888d-41ca-a889-54d99ecd14a8.png)
+
+
+The Pods are being replaced with the older version 1 at a time following RollingUpdate strategy.
+
+`kubectl get rs`
+
+![image](https://user-images.githubusercontent.com/29271635/131512811-f9ddf88c-2a84-43ab-a0b9-d4a866f949eb.png)
