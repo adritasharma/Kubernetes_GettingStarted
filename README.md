@@ -454,6 +454,7 @@ We increase the replicas in deployment.yml
 ### Rolling Updates
 
 ------------------- Deployment Spec -------------------------------------------- 
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -471,6 +472,7 @@ spec:
     rollingUpdate:
       maxUnavailable: 0
       maxSurge: 1
+```
 
 - **RollingUpdate strategy** means anytime we update the image (in the Container Spec of Deployment.yml), instead of deleting all the existing pods, and replacing them all in 1 go with 10 new ones, it should create 1 new pod and terminate 1 old one in a repeated cycle (here 10 times)
 
