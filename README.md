@@ -480,4 +480,6 @@ spec:
 - **maxSurge**: 1 - During an update we can surge 1 pod more than the desired state i.e upto 11 Pods
 - **minReadySeconds**: 5 - The new pod should be up and running for min 5 seconds before an old one is terminated
 
-So Kubernetes will deploy 1 new pod on the new version (the 11th Pod), one that up and running for minimum 5 seconds, it will terminate the an old Pod. It will repeat the process until it cycles through all 10 Pods
+So Kubernetes will deploy 1 new pod on the new version (the 11th Pod), wait until it is up and running for minimum 5 seconds then terminate an old Pod. It will repeat the process until it cycles through all 10 Pods
+
+### Rollbacks
