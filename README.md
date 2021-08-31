@@ -358,5 +358,40 @@ Replica set is a API object. It does the Self healing and scaling. It continousl
 
 ## Creating Deployment YAML
 
+```
+# Simple deployment used to deploy and manage the app in nigelpoulton/getting-started-k8s:1.0
+
+------------------- Deployment Spec -------------------------------------------- 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deploy
+  labels:
+    app: web
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: web
+------------------- Pod Spec --------------------------------------------      
+  template:
+    metadata:
+      labels:
+        app: web
+    spec: 
+      terminationGracePeriodSeconds: 1
+      
+------------------ Container Spec  (<app>) -------------------------------
+      containers:
+      - name: hello-pod
+        image: nigelpoulton/getting-started-k8s:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+```
+
+- Here since Replica is 5, 5 pods will be running the same application.
+- The deployment must know which Pods it is managing (updates, rollbacks etc). The label selector in deployment spec must match the label selector in Pod spec. 
+
 
 
