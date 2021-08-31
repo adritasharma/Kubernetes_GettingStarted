@@ -393,5 +393,24 @@ spec:
 - Here since Replica is 5, 5 pods will be running the same application.
 - The deployment must know which Pods it is managing (updates, rollbacks etc). The label selector in deployment spec must match the label selector in Pod spec. 
 
+### Deploying
+
+`kubectl apply -f deploy.yml`
+
+`kubectl get pods`
+
+![image](https://user-images.githubusercontent.com/29271635/131466512-a0691a37-a633-4794-85ea-bd2bf3800bb9.png)
+
+`kubectl get deploy`
+
+![image](https://user-images.githubusercontent.com/29271635/131466612-98b37649-5078-4701-aa82-8fd52dd3cff1.png)
+
+`kubectl get rs`
+
+![image](https://user-images.githubusercontent.com/29271635/131466677-f6e1d3c9-1a9d-4c42-9f0e-515833c339f1.png)
+
+
+
+
 
 
