@@ -451,4 +451,31 @@ We increase the replicas in deployment.yml
 ![image](https://user-images.githubusercontent.com/29271635/131470330-ad5494d6-9663-4378-8434-86e565dbee28.png)
 
 
+### Rolling Updates
 
+------------------- Deployment Spec -------------------------------------------- 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deploy
+  labels:
+    app: web
+spec:
+  selector:
+    matchLabels:
+      app: web
+  replicas: 10
+  minReadySeconds: 5
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+
+- **RollingUpdate strategy** means anytime we update the image (in the Container Spec of Deployment.yml), instead of deleting all the existing pods, and replacing them all in 1 go with 10 new ones, it should create 1 new pod and terminate 1 old one in a repeated cycle (here 10 times)
+
+- **maxUnavailable**: 0 - Always maintain 10 pods
+- **maxSurge**: 1 - During an update we can surge 1 pod more than the desired state i.e upto 11 Pods
+- **minReadySeconds**: 5 - The new pod should be up and running for min 5 seconds before an old one is terminated
+
+So Kubernetes will deploy 1 new pod on the new version (the 11th Pod), one that up and running for minimum 5 seconds, it will terminate the an old Pod. It will repeat the process until it cycles through all 10 Pods
