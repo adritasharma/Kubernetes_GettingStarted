@@ -421,12 +421,34 @@ The load balancer service was running long before the new pods were added. It ha
 
 ![image](https://user-images.githubusercontent.com/29271635/131468198-831fc1b5-90f2-4281-93b6-15cdd33b311a.png)
 
-The Addresses ate the IPs of our 5 Replicas
+The Addresses are the IPs of our 5 Replicas
 
-### Self Healing and Scaling
+### Self Healing
 
+We will delete a Pod
 
+![image](https://user-images.githubusercontent.com/29271635/131469312-97e955b5-10ac-4c6f-b730-715759959b46.png)
 
+We will get the Pod list again
+
+`kubectl get pods`
+
+![image](https://user-images.githubusercontent.com/29271635/131469414-2dcecc96-e40c-414c-9255-fc28acdcd246.png)
+
+We can see that there are 5 Pods even after we deleted 1.  One of the Pod's age is just 10s. This means this Pod was created just after we deleted 1 pod and thus maintaing 
+sesired state and current state
+
+### Scaling
+
+We increase the replicas in deployment.yml
+
+![image](https://user-images.githubusercontent.com/29271635/131470196-d21445cc-ec4f-4760-96f9-9cc423e774fa.png)
+
+`kubectl apply -f deploy.yml`
+
+`kubectl get pods`
+
+![image](https://user-images.githubusercontent.com/29271635/131470330-ad5494d6-9663-4378-8434-86e565dbee28.png)
 
 
 
