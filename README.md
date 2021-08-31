@@ -397,9 +397,10 @@ spec:
 
 `kubectl apply -f deploy.yml`
 
-`kubectl get pods`
+`kubectl get pods -- show-labels`
 
-![image](https://user-images.githubusercontent.com/29271635/131466512-a0691a37-a633-4794-85ea-bd2bf3800bb9.png)
+![image](https://user-images.githubusercontent.com/29271635/131467873-50c33553-4dd7-4faf-8510-35c465c738a8.png)
+
 
 `kubectl get deploy`
 
@@ -414,10 +415,15 @@ spec:
 ![image](https://user-images.githubusercontent.com/29271635/131467108-b648ea05-cab7-4049-b6d1-cfc2e2d6ff92.png)
 
 
-The load balancer service was running long before the new pods were added. Labels are dynamic. The service by watching the API server saw new pods arrive and added them to the healthy endpoints
+The load balancer service was running long before the new pods were added. It has selector label - app=**web** and the new pods also have the same label **web**. Labels are dynamic. The service by watching the API server saw new pods arrive and added them to the healthy endpoints.
 
+`kubectl describe ep ps-lb`
 
+![image](https://user-images.githubusercontent.com/29271635/131468198-831fc1b5-90f2-4281-93b6-15cdd33b311a.png)
 
+The Addresses ate the IPs of our 5 Replicas
+
+### Self Healing and Scaling
 
 
 
