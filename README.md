@@ -409,6 +409,16 @@ spec:
 
 ![image](https://user-images.githubusercontent.com/29271635/131466677-f6e1d3c9-1a9d-4c42-9f0e-515833c339f1.png)
 
+`kubectl describe svc ps-lb`
+
+![image](https://user-images.githubusercontent.com/29271635/131467108-b648ea05-cab7-4049-b6d1-cfc2e2d6ff92.png)
+
+
+The load balancer service was running long before the new pods were added. Labels are dynamic. The service by watching the API server saw new pods arrive and added them to the healthy endpoints
+
+
+
+
 
 
 
